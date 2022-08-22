@@ -33,42 +33,43 @@ class _ToDoState extends State<ToDo> {
     _textFieldController.clear();
   }
 
-  //Generate list of item widgets
+  //Generate list untuk widget item
   Widget _buildTodoItem(String title) {
     return ListTile(
       title: Text(title),
     );
   }
 
-  //Generate a single item widget
+  //Generate widget satu item
   Future<Future> _displayDialog(BuildContext context) async {
     return showDialog(
-        context: context,
-        builder: (BuildContext context) {
-          return AlertDialog(
-            title: const Text('Tambahkan Kegiatan anda'),
-            content: TextField(
-              controller: _textFieldController,
-              decoration:
-                  const InputDecoration(hintText: 'Masukan kegiatan disini'),
+      context: context,
+      builder: (BuildContext context) {
+        return AlertDialog(
+          title: const Text('Tambahkan Kegiatan anda'),
+          content: TextField(
+            controller: _textFieldController,
+            decoration:
+                const InputDecoration(hintText: 'Masukan kegiatan disini'),
+          ),
+          actions: <Widget>[
+            TextButton(
+              child: const Text('TAMBAH'),
+              onPressed: () {
+                Navigator.of(context).pop();
+                _addTodoItem(_textFieldController.text);
+              },
             ),
-            actions: <Widget>[
-              TextButton(
-                child: const Text('TAMBAH'),
-                onPressed: () {
-                  Navigator.of(context).pop();
-                  _addTodoItem(_textFieldController.text);
-                },
-              ),
-              TextButton(
-                child: const Text('BATAL'),
-                onPressed: () {
-                  Navigator.of(context).pop();
-                },
-              )
-            ],
-          );
-        });
+            TextButton(
+              child: const Text('BATAL'),
+              onPressed: () {
+                Navigator.of(context).pop();
+              },
+            )
+          ],
+        );
+      },
+    );
   }
 
   List<Widget> _getItems() {
