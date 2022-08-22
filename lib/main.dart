@@ -19,7 +19,7 @@ class MyApp extends StatelessWidget {
         //Mengganti warna kotak checkbox
         unselectedWidgetColor: Colors.white,
       ),
-      home: const ToDo(),
+      home: const MainScreen(),
     );
   }
 }
@@ -29,6 +29,17 @@ class MainScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container();
+    return Scaffold(
+      appBar: AppBar(
+        title: Text('GA JELAS'),
+      ),
+      body: Column(
+        children: <Widget>[
+          Text('My Day'),
+          Text('Planned'),
+          Text('Assigned to me')
+        ],
+      ),
+    );
   }
 }

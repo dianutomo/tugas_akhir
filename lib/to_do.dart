@@ -20,7 +20,7 @@ class _ToDoState extends State<ToDo> {
       body: ListView(children: _getItems()),
       floatingActionButton: FloatingActionButton(
         onPressed: () => _displayDialog(context),
-        tooltip: 'Add Item',
+        tooltip: 'Tambah Item',
         child: const Icon(Icons.add),
       ),
     );
