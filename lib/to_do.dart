@@ -16,6 +16,7 @@ class _ToDoState extends State<ToDo> {
     return Scaffold(
       appBar: AppBar(
         title: const Text('To-Do List'),
+        backgroundColor: Colors.amber,
       ),
       body: ListView(children: _getItems()),
       floatingActionButton: FloatingActionButton(

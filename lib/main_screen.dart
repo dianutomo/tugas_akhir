@@ -38,6 +38,7 @@ class MainScreen extends StatelessWidget {
     return Scaffold(
         appBar: AppBar(
           title: const Text('TUGAS AKHIR: To Do List'),
+          backgroundColor: Colors.amber,
         ),
         body: InkWell(
           onTap: () {
@@ -48,7 +49,13 @@ class MainScreen extends StatelessWidget {
           child: Card(
             child: Row(
               children: const [
-                Text('TASK'),
+                Text(
+                  'TASK',
+                  style: TextStyle(
+                    fontWeight: FontWeight.bold,
+                    fontSize: 20,
+                  ),
+                ),
               ],
             ),
           ),

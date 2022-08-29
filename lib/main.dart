@@ -17,8 +17,6 @@ class MyApp extends StatelessWidget {
       title: 'To-Do-List',
       theme: ThemeData(
         primarySwatch: Colors.blue,
-        //Mengganti warna kotak checkbox
-        unselectedWidgetColor: Colors.white,
       ),
       home: MainScreen(),
     );
